@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Server, Database } from 'lucide-react';
+import { Layout, Server, Database, ToolCase } from 'lucide-react';
 
 const Skills = () => {
     const skillCategories = [
@@ -9,14 +9,14 @@ const Skills = () => {
             glowClass: "red-glow",
             chipClass: "red-chip",
             skills: [
+                "Next.js",
                 "React.js",
-                "React Native",
-                "JavaScript (ES6+)",
                 "TypeScript",
+                "JavaScript (ES6+)",
+                "Tailwind CSS",
                 "HTML5",
                 "CSS3",
                 "Bootstrap",
-                "Responsive Design"
             ]
         },
         {
@@ -26,9 +26,8 @@ const Skills = () => {
             chipClass: "indigo-chip",
             skills: [
                 "Core Java",
-                "OOP Principles",
-                "REST APIs",
-                "Exception Handling"
+                "Spring Framework",
+                "REST APIs",                
             ]
         },
         {
@@ -37,11 +36,21 @@ const Skills = () => {
             glowClass: "cyan-glow",
             chipClass: "cyan-chip",
             skills: [
+                "SQL",                
                 "MySQL",
-                "Relational Database Design",
-                "SQL Queries",
-                "Joins",
-                "Indexing"
+                "PostgreSQL",
+            ]
+        },
+        {
+            title: "Tools",
+            icon: <ToolCase className="text-accent-cyan" size={24} />,
+            glowClass: "cyan-glow",
+            chipClass: "cyan-chip",
+            skills: [
+                "Git & Github",                
+                "Postman",
+                "Eclipse IDE",
+                "VS Code",
             ]
         }
     ];
@@ -51,7 +60,6 @@ const Skills = () => {
             <div className="container">
                 <div className="section-header scroll-reveal fade-up">
                     <h2 className="section-title">Technical Skills</h2>
-                    <p className="section-subtitle">My professional toolbox & technologies I work with</p>
                 </div>
 
                 <div className="skills-grid">
