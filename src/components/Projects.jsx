@@ -1,7 +1,7 @@
 import React from 'react';
 import { ExternalLink, ShieldCheck, Building2, ShieldAlert } from 'lucide-react';
-import pcmcScreenshot from '../assets/pcmc-screenshot.png';
-import ddosScreenshot from '../assets/ddos-protection.png';
+import storeRatingApp from '../assets/projects/store rating app.jpg';
+import nvidiaFibernet from '../assets/projects/NvidiaFibernet.png';
 
 // Custom GithubIcon component
 const GithubIcon = ({ size = 16, ...props }) => (
@@ -25,35 +25,35 @@ const GithubIcon = ({ size = 16, ...props }) => (
 const Projects = () => {
     const projectList = [
         {
-            title: "City Corporation Complaint Portal (PCMC)",
-            date: "01/2026 - 02/2026",
-            image: pcmcScreenshot,
+            title: "Store Rating Web App",
+            image: storeRatingApp,
             bgClass: "project-p1-gradient",
             icon: <Building2 className="project-bg-icon" size={80} />,
-            tags: ["JavaScript", "Flexbox / Grid", "DOM Manipulation"],
-            description: "A responsive web-based City Complaint Management Portal enabling citizens to report civic issues efficiently. Features dynamic single-page navigation and image uploads with live preview.",
+            tags: ["Spring Boot", "MySQL", "ReactJS"],
+            description: "Developed a full-stack web application using Spring Boot, MySQL, and ReactJS that enables users to submit ratings for registered stores. Implemented a role-based login system supporting System Administrators, Normal Users, and Store Owners with dashboards and functionalities.",
             features: [
-                "Dynamic single-page navigation using JavaScript DOM.",
-                "Custom responsive layout via CSS Flexbox and Grid.",
-                "Image upload integration with instantaneous preview."
+                "Admin Module: Complete CRUD for Users, Categories, and Products, along with monitoring dashboards.",
+                "User Module: Secure authentication and ability to rate products.",
+                "Store Owner Module: Store management and review handling capabilities.",
+                "Tech Stack: Spring Boot (Backend), MySQL (Database), ReactJS (Frontend)."
             ],
-            codeUrl: "https://github.com/ajinkyatambe8683/Corporation-Complaint-Portal-",
-            demoUrl: "https://corporation-complaint-portal.vercel.app/"
+            codeUrl: "https://github.com/Aniket0990/Store-Rating-App",
+            demoUrl: "#contact"
         },
         {
-            title: "DDoS Attack Prevention System",
-            date: "12/2024 - 01/2025",
-            image: ddosScreenshot,
+            title: "Nvidia Fibernet BroadbandSystem",
+            image: nvidiaFibernet,
             bgClass: "project-p2-gradient",
             icon: <ShieldAlert className="project-bg-icon" size={80} />,
-            tags: ["Network Security", "Wireshark", "Rate Limiting"],
-            description: "A network security mechanism to detect and mitigate Distributed Denial of Service attacks, utilizing rate-limiting and IP-blocking techniques to shield backend servers.",
+            tags: ["Java Swing", "MySQL", "JDBC"],
+            description: "Developed a full-stack desktop application using Java Swing for broadband service for users. Integrated MySQL database using JDBC for dynamic data fetching, managing billing, user data, and service queries.",
             features: [
-                "Analysis of network packets to identify malicious behavior.",
-                "Rate-limiting and IP-blocking system configuration.",
-                "Simulated stress testing evaluated via Wireshark."
+                "User Interface: Clean and intuitive GUI built with Swing, providing seamless navigation for customers.",
+                "Data Management: Secure storage and retrieval of user details, plan information, and billing records using MySQL and JDBC.",
+                "Billing & Payments: Automated billing cycles and payment tracking system.",
+                "Tech Stack: Java Swing (Backend), MySQL (Database), JDBC (Connector)."
             ],
-            codeUrl: "https://github.com/ajinkyatambe8683",
+            codeUrl: "https://github.com/Aniket0990/NvidiaFibernetBroadbandBillingSystem",
             demoUrl: "#contact"
         }
     ];
@@ -78,7 +78,6 @@ const Projects = () => {
             <div className="container">
                 <div className="section-header scroll-reveal fade-up">
                     <h2 className="section-title">Featured Projects</h2>
-                    <p className="section-subtitle">Some of my key software and security systems</p>
                 </div>
 
                 <div className="projects-grid">
@@ -86,17 +85,16 @@ const Projects = () => {
                         <article key={idx} className="project-card scroll-reveal fade-up">
                             <div className="project-image-container">
                                 {project.image ? (
-                                    <img 
-                                        src={project.image} 
-                                        alt={project.title} 
-                                        className="project-image" 
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="project-image"
                                     />
                                 ) : (
                                     <div className={`project-graphic-placeholder ${project.bgClass}`}>
                                         {project.icon}
                                     </div>
                                 )}
-                                <span className="project-badge-overlay">{project.date}</span>
                             </div>
                             <div className="project-info">
                                 <h3 className="project-title">{project.title}</h3>
@@ -123,8 +121,8 @@ const Projects = () => {
                                         title="View Demo"
                                         onClick={project.demoUrl.startsWith('#') ? handleScrollToContact : undefined}
                                     >
-                                        {idx === 0 ? <ExternalLink size={16} /> : <ShieldCheck size={16} />}
-                                        <span>{idx === 0 ? "Live Demo" : "Details"}</span>
+                                        {idx === 0 ? <ExternalLink size={16} /> : <ExternalLink size={16} />}
+                                        <span>{idx === 0 ? "Live Demo soon..." : "Live Demo soon..."}</span>
                                     </a>
                                 </div>
                             </div>

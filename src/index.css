@@ -112,6 +112,15 @@ input, textarea, button {
     margin: 0 auto;
 }
 
+section {
+    min-height: calc(100vh - var(--navbar-height));
+    min-height: calc(100dvh - var(--navbar-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 .section-padding {
     padding: 60px 0px;
 }
@@ -232,7 +241,7 @@ input, textarea, button {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 12px 28px;
+    padding: 8px 15px;
     border-radius: 9999px;
     font-weight: 500;
     cursor: pointer;
@@ -293,9 +302,9 @@ input, textarea, button {
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -6px;
-    left: 25%;
-    width: 50%;
+    bottom: -10px;
+    left: 0%;
+    width: 100%;
     height: 3px;
     background: linear-gradient(90deg, var(--color-primary), var(--color-accent-cyan));
     border-radius: 2px;
@@ -326,7 +335,7 @@ input, textarea, button {
 }
 
 .navbar.scrolled {
-    height: 70px;
+    height: var(--navbar-height);
     background: rgba(8, 5, 4, 0.9);
     box-shadow: 0 10px 30px rgba(8, 5, 4, 0.5);
 }
@@ -403,6 +412,7 @@ input, textarea, button {
    ========================================================================== */
 .hero-section {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -723,7 +733,7 @@ input, textarea, button {
 .skills-category:hover {
     transform: translateY(-5px);
     border-color: var(--color-border-glow);
-    box-shadow: 0 20px 30px rgba(57, 211, 83, 0.12);
+    box-shadow: 0 20px 30px rgba(212, 163, 115, 0.15);
 }
 
 .category-header {
@@ -856,7 +866,7 @@ input, textarea, button {
     align-items: center;
     justify-content: center;
     z-index: 2;
-    box-shadow: 0 0 15px rgba(57, 211, 83, 0.35);
+    box-shadow: 0 0 15px rgba(212, 163, 115, 0.5);
 }
 
 .timeline-card {
@@ -871,7 +881,7 @@ input, textarea, button {
 .timeline-card:hover {
     transform: translateY(-5px);
     border-color: var(--color-border-glow);
-    box-shadow: 0 15px 30px rgba(57, 211, 83, 0.12);
+    box-shadow: 0 15px 30px rgba(212, 163, 115, 0.15);
 }
 
 .timeline-card.left {

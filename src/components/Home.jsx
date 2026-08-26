@@ -3,16 +3,16 @@ import { Mail, Phone, ArrowRight, MessageSquare, ChevronsDown } from 'lucide-rea
 
 // Custom SVG components for brand icons removed in newer Lucide versions
 const GithubIcon = ({ size = 20, ...props }) => (
-    <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        width={size} 
-        height={size} 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         {...props}
     >
         <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
@@ -21,16 +21,16 @@ const GithubIcon = ({ size = 20, ...props }) => (
 );
 
 const LinkedinIcon = ({ size = 20, ...props }) => (
-    <svg 
-        xmlns="http://www.w3.org/2000/svg" 
-        width={size} 
-        height={size} 
-        viewBox="0 0 24 24" 
-        fill="none" 
-        stroke="currentColor" 
-        strokeWidth="2" 
-        strokeLinecap="round" 
-        strokeLinejoin="round" 
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={size}
+        height={size}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         {...props}
     >
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
@@ -51,7 +51,7 @@ const Home = () => {
     useEffect(() => {
         let timer;
         const activeWord = roles[roleIndex];
-        
+
         const tick = () => {
             if (!isDeleting) {
                 setCurrentText(activeWord.substring(0, currentText.length + 1));
@@ -66,9 +66,9 @@ const Home = () => {
                 }
             }
         };
-        
+
         const delay = isDeleting ? 40 : 100;
-        
+
         // Add pauses when fully typed or fully deleted
         let timeoutVal = delay;
         if (currentText === activeWord && isDeleting) {
@@ -76,9 +76,9 @@ const Home = () => {
         } else if (currentText === '' && !isDeleting) {
             timeoutVal = 500;  // Pause before starting next word
         }
-        
+
         timer = setTimeout(tick, timeoutVal);
-        
+
         return () => clearTimeout(timer);
     }, [currentText, isDeleting, roleIndex]);
 
@@ -86,10 +86,10 @@ const Home = () => {
         e.preventDefault();
         const element = document.getElementById(targetId);
         if (element) {
-            const headerOffset = 80;
+            const headerOffset = targetId === 'home' ? 0 : 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -112,7 +112,7 @@ const Home = () => {
                     {/* <p className="hero-description">
                         Detail-oriented Full Stack Developer specializing in building and deploying responsive web & mobile applications. Skilled in React.js, React Native, TypeScript, and scalable backend services.
                     </p> */}
-                    
+
                     <div className="hero-cta">
                         <a href="#projects" className="btn btn-primary" onClick={(e) => handleScrollTo(e, 'projects')}>
                             <span>View My Work</span>
@@ -150,13 +150,13 @@ const Home = () => {
                                 <span className="profile-title">developer.json</span>
                             </div>
                             <div className="profile-body">
-<pre><code>{`{
+                                <pre><code>{`{
   `}
-  <span className="key">"name"</span>{`: `}<span className="string">"Aniket Shelke"</span>{`,
+                                    <span className="key">"name"</span>{`: `}<span className="string">"Aniket Shelke"</span>{`,
   `}
-  <span className="key">"role"</span>{`: `}<span className="string">"Software Engineer"</span>{`,
+                                    <span className="key">"role"</span>{`: `}<span className="string">"Software Engineer"</span>{`,
   `}
-  <span className="key">"skills"</span>{`: [
+                                    <span className="key">"skills"</span>{`: [
     `}<span className="string">"Next.js"</span>{`,
     `}<span className="string">"React.js"</span>{`,
     `}<span className="string">"TypeScript"</span>{`,
@@ -171,18 +171,19 @@ const Home = () => {
     `}<span className="string">"HTML5 & CSS3"</span>{`,
     `}<span className="string">"Bootstrap"</span>{`,
   ],
+}
   `}
-  </code></pre>
+                                </code></pre>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <a href="#about" className="scroll-indicator" onClick={(e) => handleScrollTo(e, 'about')} aria-label="Scroll to About section">
                 <ChevronsDown size={28} />
             </a>
-            
+
             <style>{`
                 .typing-cursor {
                     color: var(--color-primary);

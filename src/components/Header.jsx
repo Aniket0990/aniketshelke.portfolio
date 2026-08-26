@@ -27,10 +27,10 @@ const Header = ({ activeSection }) => {
         setIsMenuOpen(false);
         const element = document.getElementById(targetId);
         if (element) {
-            const headerOffset = 80;
+            const headerOffset = targetId === 'home' ? 0 : 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -53,13 +53,13 @@ const Header = ({ activeSection }) => {
                 <a href="#home" className="logo" onClick={(e) => handleLinkClick(e, 'home')}>
                     <span className="logo-accent">&lt;</span>Aniket<span className="logo-accent"> /&gt;</span>
                 </a>
-                
+
                 <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`} id="nav-menu">
                     <ul>
                         {navLinks.map((link) => (
                             <li key={link.id}>
-                                <a 
-                                    href={`#${link.id}`} 
+                                <a
+                                    href={`#${link.id}`}
                                     className={`nav-link ${activeSection === link.id ? 'active' : ''}`}
                                     onClick={(e) => handleLinkClick(e, link.id)}
                                 >
@@ -72,7 +72,7 @@ const Header = ({ activeSection }) => {
 
                 <div className="nav-actions">
                     <a href="#contact" className="btn btn-secondary contact-btn-nav" onClick={(e) => handleLinkClick(e, 'contact')}>
-                        Hire Me
+                        Lets Connect
                     </a>
                     <button className="mobile-toggle" id="mobile-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu">
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

@@ -5,10 +5,10 @@ const Footer = () => {
         e.preventDefault();
         const element = document.getElementById(targetId);
         if (element) {
-            const headerOffset = 80;
+            const headerOffset = targetId === 'home' ? 0 : 80;
             const elementPosition = element.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-            
+
             window.scrollTo({
                 top: offsetPosition,
                 behavior: 'smooth'
@@ -25,7 +25,7 @@ const Footer = () => {
                     </a>
                     <p>Building high-performance web solutions.</p>
                 </div>
-                
+
                 <div className="footer-links">
                     <h4>Navigation</h4>
                     <ul>
@@ -36,10 +36,9 @@ const Footer = () => {
                         <li><a href="#projects" onClick={(e) => handleScrollTo(e, 'projects')}>Projects</a></li>
                     </ul>
                 </div>
-                
+
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Aniket Shelke. All rights reserved.</p>
-                    <p>Designed and built with passion.</p>
                 </div>
             </div>
         </footer>

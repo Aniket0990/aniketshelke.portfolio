@@ -116,13 +116,12 @@ const Contact = () => {
             <div className="container">
                 <div className="section-header scroll-reveal fade-up">
                     <h2 className="section-title">Get In Touch</h2>
-                    <p className="section-subtitle">Let's discuss projects, opportunities, or collaboration</p>
                 </div>
 
                 <div className="contact-grid">
                     <div className="contact-info-panel scroll-reveal fade-up">
                         <h3>Connect With Me</h3>
-                        <p>Feel free to reach out to me via phone, email, or connect with me on LinkedIn and GitHub. I'm always open to discussing new software development projects, design systems, or internship positions.</p>
+                        <p>Feel free to reach out to me via phone, email, or connect with me on LinkedIn and GitHub. I'm always open to discussing new software development projects or Full-Time positions.</p>
                         
                         <div className="contact-methods">
                             <div className="contact-card-item">
