@@ -64,9 +64,6 @@ const About = () => {
                         <p className="about-text">
                             - I am familiar with the Software Development Life Cycle (SDLC) and understand how different stages such as planning, development, testing, and deployment contribute to building successful software products. Additionally, I have experience with CI/CD practices that help streamline development workflows, improve code quality, and enable faster and more reliable deployments.
                         </p>
-                        <p className="about-text">
-                            - Tech Stack: HTML5 | CSS3 | JavaScript | TypeScript | React.js | Next.js | Tailwind CSS | Java | Spring Boot | REST API | SQL | MySQL | PostgreSQL | Git | GitHub | SDLC | CI/CD
-                        </p>
 
                         {/* Statistics Grid Nested Underneath Bio */}
                         {/* <div className="about-stats">

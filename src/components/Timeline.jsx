@@ -61,7 +61,7 @@ const Timeline = () => {
             date: "2019-2020",
             title: "HSC Science",
             organization: "Arts, Science and Commerce College",
-            location: "Rahuri, Pune",
+            location: "Rahuri, Ahilyanagar",
             icon: <BookOpen size={20} />,
             side: "left",
             text: "61%"
@@ -70,7 +70,7 @@ const Timeline = () => {
             date: "2017-2018",
             title: "SSC Science",
             organization: "Savitribai Phule Madhyamik Vidyalaya, MPKV",
-            location: "Rahuri, Pune",
+            location: "M.P.K.V. Rahuri, Ahilyanagar",
             icon: <Award size={20} />,
             side: "right",
             text: "87%"
