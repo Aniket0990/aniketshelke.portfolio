@@ -1,25 +1,9 @@
-import React, { useState } from 'react';
-import { Briefcase, GraduationCap, BookOpen, Award, ExternalLink } from 'lucide-react';
-import CertificateModal from './CertificateModal';
+import React from 'react';
+import { Briefcase, GraduationCap, BookOpen, Award } from 'lucide-react';
 
-const Timeline = () => {
-    const [activeCertificate, setActiveCertificate] = useState(null);
+const Experience = () => {
 
     const timelineItems = [
-        // {
-        //     date: "July 2026",
-        //     title: "Full Stack Java & React Developer Course",
-        //     organization: "JSpiders Java Training Center",
-        //     location: "Pune, Maharashtra",
-        //     icon: <Award size={20} />,
-        //     side: "left",
-        //     points: [
-        //         "Mastered Core Java programming, OOP principles, collections framework, and multi-threading.",
-        //         "Learned Advanced Java concepts and database design using MySQL/SQL queries (joins, indexing).",
-        //         "Built responsive, modern frontends using HTML5, CSS3, ES6+ JavaScript, and React.js."
-        //     ],
-        //     certificateLink: "/Course Completion Certificate.pdf"
-        // },
         {
             date: "02/2026 - Present",
             title: "Frontend Developer",
@@ -114,48 +98,13 @@ const Timeline = () => {
                                         <p style={{ fontSize: '0.9rem', color: 'var(--color-text-secondary)' }}>{item.text}</p>
                                     </div>
                                 )}
-                                {item.certificateLink && (
-                                    <div className="timeline-card-footer" style={{ marginTop: '15px', paddingTop: '15px', borderTop: '1px solid var(--color-border)' }}>
-                                        <a 
-                                            href={item.certificateLink} 
-                                            className="timeline-cert-link"
-                                            onClick={(e) => {
-                                                e.preventDefault();
-                                                setActiveCertificate({
-                                                    url: item.certificateLink,
-                                                    title: "Course Completion Certificate",
-                                                    organization: item.organization
-                                                });
-                                            }}
-                                            style={{ 
-                                                display: 'inline-flex', 
-                                                alignItems: 'center', 
-                                                gap: '6px', 
-                                                fontSize: '0.88rem', 
-                                                color: 'var(--color-primary)', 
-                                                fontWeight: '600',
-                                                cursor: 'pointer',
-                                                transition: 'color var(--transition-fast)'
-                                            }}
-                                        >
-                                            <ExternalLink size={16} />
-                                            <span>{item.title.toLowerCase().includes('course') ? 'View Course Certificate' : 'View Internship Certificate'}</span>
-                                        </a>
-                                    </div>
-                                )}
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
-            {activeCertificate && (
-                <CertificateModal 
-                    certificate={activeCertificate} 
-                    onClose={() => setActiveCertificate(null)} 
-                />
-            )}
         </section>
     );
 };
 
-export default Timeline;
+export default Experience;
