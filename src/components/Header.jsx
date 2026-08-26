@@ -71,7 +71,7 @@ const Header = ({ activeSection }) => {
                 </nav>
 
                 <div className="nav-actions">
-                    <a href="#contact" className="btn btn-secondary contact-btn-nav" onClick={(e) => handleLinkClick(e, 'contact')}>
+                    <a href="#footer" className="btn btn-secondary contact-btn-nav" onClick={(e) => handleLinkClick(e, 'footer')}>
                         Lets Connect
                     </a>
                     <button className="mobile-toggle" id="mobile-toggle" onClick={toggleMenu} aria-label="Toggle navigation menu">

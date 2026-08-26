@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, ShieldCheck, Building2, ShieldAlert } from 'lucide-react';
+import { ExternalLink, Building2, ShieldAlert } from 'lucide-react';
 import storeRatingApp from '../assets/projects/store rating app.jpg';
 import nvidiaFibernet from '../assets/projects/NvidiaFibernet.png';
 
