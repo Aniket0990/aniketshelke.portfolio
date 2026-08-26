@@ -6,58 +6,74 @@ const Timeline = () => {
     const [activeCertificate, setActiveCertificate] = useState(null);
 
     const timelineItems = [
+        // {
+        //     date: "July 2026",
+        //     title: "Full Stack Java & React Developer Course",
+        //     organization: "JSpiders Java Training Center",
+        //     location: "Pune, Maharashtra",
+        //     icon: <Award size={20} />,
+        //     side: "left",
+        //     points: [
+        //         "Mastered Core Java programming, OOP principles, collections framework, and multi-threading.",
+        //         "Learned Advanced Java concepts and database design using MySQL/SQL queries (joins, indexing).",
+        //         "Built responsive, modern frontends using HTML5, CSS3, ES6+ JavaScript, and React.js."
+        //     ],
+        //     certificateLink: "/Course Completion Certificate.pdf"
+        // },
         {
-            date: "July 2026",
-            title: "Full Stack Java & React Developer Course",
-            organization: "JSpiders Java Training Center",
+            date: "02/2026 - Present",
+            title: "Frontend Developer",
+            organization: "TechTech",
             location: "Pune, Maharashtra",
-            icon: <Award size={20} />,
-            side: "left",
-            points: [
-                "Mastered Core Java programming, OOP principles, collections framework, and multi-threading.",
-                "Learned Advanced Java concepts and database design using MySQL/SQL queries (joins, indexing).",
-                "Built responsive, modern frontends using HTML5, CSS3, ES6+ JavaScript, and React.js."
-            ],
-            certificateLink: "/Course Completion Certificate.pdf"
-        },
-        {
-            date: "12/2023 - 01/2024",
-            title: "Data Science Intern",
-            organization: "Neual Pvt. Ltd.",
-            location: "Bavdhan, Pune",
             icon: <Briefcase size={20} />,
             side: "right",
             points: [
-                "Developed a python-based data analysis system to process real-world weather datasets (temperature, humidity).",
-                "Performed data cleaning, preprocessing, and statistical analysis to improve data quality.",
-                "Created visual reports to identify seasonal patterns and trends.",
-                "Implemented a linear regression model to predict temperature variations."
+                "Developing modern, responsive, and user-friendly web applications as a Frontend Developer at TechTech.",
+                "Building scalable and reusable UI components using Next.js, React.js, JavaScript, TypeScript, and Tailwind CSS.",
+                "Integrating frontend applications with backend services through REST APIs to ensure seamless functionality.",
+                "Optimizing application performance and improving user experience across different devices and browsers.",
+                "Collaborating with cross-functional teams including backend developers and designers."
             ]
         },
         {
-            date: "BE (Graduation)",
-            title: "Artificial Intelligence & Data Science Engineering",
-            organization: "Genba Sopanrao Moze College of Engineering",
-            location: "Balewadi, Pune",
-            icon: <GraduationCap size={20} />,
+            date: "02/2025 - 07/2025",
+            title: "Java FullStack Developer Intern",
+            organization: "Robowaves",
+            location: "Pune, Maharashtra",
+            icon: <Briefcase size={20} />,
             side: "left",
-            text: "Pursued Engineering with a specialized focus on AI paradigms, advanced statistical analysis, machine learning algorithms, database management systems, and modern web software architectures."
+            points: [
+                "Working on Java-based real-time application Development with Hands-on experience.",
+                "Designed and integrated backend and frontend components to create scalable, user-friendly systems.",
+                "Ensured coding best practices, clean architecture, and deployment on AWS."
+            ]
         },
         {
-            date: "Higher Secondary (HSC)",
-            title: "Science Stream (72.63%)",
-            organization: "Modern Junior College",
-            location: "Yamunanagar, Nigdi, Pune",
+            date: "2020 - 2024",
+            title: "Bachelor of Engineering in Computer Science",
+            organization: "SKN Sinhgad Institute of Technology and Science",
+            location: "Lonavala, Pune",
+            icon: <GraduationCap size={20} />,
+            side: "right",
+            text: "7.83 (CGPA)"
+        },
+        {
+            date: "2019-2020",
+            title: "HSC Science",
+            organization: "Arts, Science and Commerce College",
+            location: "Rahuri, Pune",
             icon: <BookOpen size={20} />,
-            side: "right"
+            side: "left",
+            text: "61%"
         },
         {
-            date: "Secondary School (SSC)",
-            title: "General Studies (90.60%)",
-            organization: "Modern High School",
-            location: "Yamunanagar, Nigdi, Pune",
+            date: "2017-2018",
+            title: "SSC Science",
+            organization: "Savitribai Phule Madhyamik Vidyalaya, MPKV",
+            location: "Rahuri, Pune",
             icon: <Award size={20} />,
-            side: "left"
+            side: "right",
+            text: "87%"
         }
     ];
 
@@ -65,8 +81,7 @@ const Timeline = () => {
         <section id="experience" className="timeline-section section-padding">
             <div className="container">
                 <div className="section-header scroll-reveal fade-up">
-                    <h2 className="section-title">My Journey</h2>
-                    <p className="section-subtitle">Internships and academic background</p>
+                    <h2 className="section-title">Experience & Education</h2>
                 </div>
 
                 <div className="timeline-container">
@@ -79,8 +94,8 @@ const Timeline = () => {
                             </div>
                             <div className={`timeline-card ${item.side}`}>
                                 <div className="timeline-card-header">
-                                    <span className="timeline-date">{item.date}</span>
                                     <h3 className="timeline-card-title">{item.title}</h3>
+                                    <span className="timeline-date">{item.date}</span>
                                     <h4 className="timeline-card-org">
                                         {item.organization} | <span className="location">{item.location}</span>
                                     </h4>

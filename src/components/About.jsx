@@ -8,7 +8,6 @@ const About = () => {
             <div className="container">
                 <div className="section-header scroll-reveal fade-up">
                     <h2 className="section-title">About Me</h2>
-                    <p className="section-subtitle">A brief overview of who I am and what I do</p>
                 </div>
 
                 <div className="about-grid">
@@ -70,7 +69,7 @@ const About = () => {
                         </p>
 
                         {/* Statistics Grid Nested Underneath Bio */}
-                        <div className="about-stats">
+                        {/* <div className="about-stats">
                             <div className="stat-card">
                                 <span className="stat-num">2+</span>
                                 <span className="stat-name">Core Projects Built</span>
@@ -83,7 +82,7 @@ const About = () => {
                                 <span className="stat-num">B.E.</span>
                                 <span className="stat-name">Computer Engineering</span>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

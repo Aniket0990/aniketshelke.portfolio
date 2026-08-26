@@ -39,7 +39,7 @@ const LinkedinIcon = ({ size = 20, ...props }) => (
     </svg>
 );
 
-const Hero = () => {
+const Home = () => {
     const roles = [
         "Software Engineer",
         "Java Full Stack Developer"
@@ -159,23 +159,20 @@ const Hero = () => {
   <span className="key">"skills"</span>{`: [
     `}<span className="string">"Next.js"</span>{`,
     `}<span className="string">"React.js"</span>{`,
-    `}<span className="string">"JavaScript"</span>{`,
     `}<span className="string">"TypeScript"</span>{`,
-    `}<span className="string">"HTML5 & CSS3"</span>{`,
+    `}<span className="string">"JavaScript"</span>{`,
     `}<span className="string">"Tailwind CSS"</span>{`,
-    `}<span className="string">"Bootstrap"</span>{`,
-    `}<span className="string">"Core Java"</span>{`,
-    `}<span className="string">"OOP Principles"</span>{`,
+    `}<span className="string">"Spring Framework"</span>{`,
     `}<span className="string">"REST API"</span>{`,
+    `}<span className="string">"Core Java"</span>{`,
     `}<span className="string">"MySQL"</span>{`,
+    `}<span className="string">"PostgreSQL"</span>{`,
+    `}<span className="string">"Git & Github"</span>{`,
+    `}<span className="string">"HTML5 & CSS3"</span>{`,
+    `}<span className="string">"Bootstrap"</span>{`,
   ],
   `}
-  <span className="key">"passions"</span>{`: [
-    `}<span className="string">"Clean Code"</span>{`,
-    `}<span className="string">"UI Aesthetics"</span>{`,
-    `}<span className="string">"Efficiency"</span>{`
-  ]
-}`}</code></pre>
+  </code></pre>
                             </div>
                         </div>
                     </div>
@@ -202,4 +199,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Home;

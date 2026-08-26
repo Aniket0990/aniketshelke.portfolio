@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
+import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
 import Timeline from './components/Timeline';
@@ -378,7 +378,7 @@ function App() {
             {/* Layout Components */}
             <Header activeSection={activeSection} />
             <main>
-                <Hero />
+                <Home />
                 <About />
                 <Skills />
                 <Timeline />
