@@ -88,6 +88,8 @@ const Contact = () => {
                                     <input 
                                         type="text" 
                                         id="form-name" 
+                                        name="name"
+                                        autoComplete="name"
                                         required 
                                         placeholder="Enter your name"
                                         value={formData.name}
@@ -100,6 +102,8 @@ const Contact = () => {
                                 <input 
                                     type="email" 
                                     id="form-email" 
+                                    name="email"
+                                    autoComplete="email"
                                     required 
                                     placeholder="Enter your email"
                                     value={formData.email}
@@ -111,6 +115,7 @@ const Contact = () => {
                                 <input 
                                     type="text" 
                                     id="form-subject" 
+                                    name="subject"
                                     required 
                                     placeholder="Enter any subject"
                                     value={formData.subject}
@@ -121,6 +126,7 @@ const Contact = () => {
                                 <label htmlFor="form-message">Message</label>
                                 <textarea 
                                     id="form-message" 
+                                    name="message"
                                     rows="5" 
                                     required 
                                     placeholder="Enter message here"

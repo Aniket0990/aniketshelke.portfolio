@@ -87,8 +87,11 @@ const Projects = () => {
                                 {project.image ? (
                                     <img
                                         src={project.image}
-                                        alt={project.title}
+                                        alt={`${project.title} - Developed by Aniket Shelke using ${project.tags.join(', ')}`}
                                         className="project-image"
+                                        loading="lazy"
+                                        width="600"
+                                        height="340"
                                     />
                                 ) : (
                                     <div className={`project-graphic-placeholder ${project.bgClass}`}>
@@ -110,7 +113,8 @@ const Projects = () => {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="project-link-btn"
-                                        title="View Source"
+                                        title={`View source code for ${project.title}`}
+                                        aria-label={`View GitHub repository for ${project.title}`}
                                     >
                                         <GithubIcon size={16} />
                                         <span>Code</span>
@@ -118,11 +122,12 @@ const Projects = () => {
                                     <a
                                         href={project.demoUrl}
                                         className="project-link-btn primary"
-                                        title="View Demo"
+                                        title={`View live demo for ${project.title}`}
+                                        aria-label={`Live demo for ${project.title}`}
                                         onClick={project.demoUrl.startsWith('#') ? handleScrollToContact : undefined}
                                     >
-                                        {idx === 0 ? <ExternalLink size={16} /> : <ExternalLink size={16} />}
-                                        <span>{idx === 0 ? "Live Demo soon..." : "Live Demo soon..."}</span>
+                                        <ExternalLink size={16} />
+                                        <span>Live Demo soon...</span>
                                     </a>
                                 </div>
                             </div>

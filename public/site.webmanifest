@@ -1,0 +1,17 @@
+{
+  "name": "Aniket Shelke | Full Stack Developer Portfolio",
+  "short_name": "Aniket Shelke",
+  "description": "Portfolio of Aniket Shelke, Software Engineer and Full Stack Developer specialized in React, Next.js, Java, and Spring Boot.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#0d1117",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

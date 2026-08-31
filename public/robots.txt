@@ -1,0 +1,7 @@
+# Allow all search engine crawlers
+User-agent: *
+Allow: /
+
+# Host & Sitemap definition
+Host: https://aniketshelkeportfolio.vercel.app
+Sitemap: https://aniketshelkeportfolio.vercel.app/sitemap.xml

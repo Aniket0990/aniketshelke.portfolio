@@ -125,16 +125,16 @@ const Home = () => {
                     </div>
 
                     <div className="hero-socials">
-                        <a href="https://github.com/Aniket0990" target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub">
+                        <a href="https://github.com/Aniket0990" target="_blank" rel="noopener noreferrer" className="social-icon" title="GitHub" aria-label="Visit Aniket Shelke's GitHub Profile">
                             <GithubIcon size={20} />
                         </a>
-                        <a href="https://linkedin.com/in/shelkeaniket" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn">
+                        <a href="https://linkedin.com/in/shelkeaniket" target="_blank" rel="noopener noreferrer" className="social-icon" title="LinkedIn" aria-label="Visit Aniket Shelke's LinkedIn Profile">
                             <LinkedinIcon size={20} />
                         </a>
-                        <a href="mailto:aniketshelke554@gmail.com" className="social-icon" title="Email">
+                        <a href="mailto:aniketshelke554@gmail.com" className="social-icon" title="Email" aria-label="Send email to Aniket Shelke">
                             <Mail size={20} />
                         </a>
-                        <a href="tel:+919112776061" className="social-icon" title="Phone">
+                        <a href="tel:+919112776061" className="social-icon" title="Phone" aria-label="Call Aniket Shelke">
                             <Phone size={20} />
                         </a>
                     </div>
