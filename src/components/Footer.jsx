@@ -75,7 +75,7 @@ const Footer = () => {
                             </div>
                             <div className="footer-contact-details">
                                 <span className="footer-contact-label">Email</span>
-                                <a href="mailto:aniketshelke554@gmail.com">aniketshelke554@gmail.com</a>
+                                <a href="mailto:aniketshelke554@gmail.com" aria-label="Send email to aniketshelke554@gmail.com">aniketshelke554@gmail.com</a>
                             </div>
                         </div>
 
@@ -87,7 +87,7 @@ const Footer = () => {
                             </div>
                             <div className="footer-contact-details">
                                 <span className="footer-contact-label">Phone no.</span>
-                                <a href="tel:+919112776061">+91 9112776061</a>
+                                <a href="tel:+919112776061" aria-label="Call +91 9112776061">+91 9112776061</a>
                             </div>
                         </div>
 
@@ -101,7 +101,7 @@ const Footer = () => {
                             </div>
                             <div className="footer-contact-details">
                                 <span className="footer-contact-label">LinkedIn</span>
-                                <a href="https://linkedin.com/in/shelkeaniket" target="_blank" rel="noopener noreferrer">Aniket Shelke</a>
+                                <a href="https://linkedin.com/in/shelkeaniket" target="_blank" rel="noopener noreferrer" aria-label="Visit Aniket Shelke's LinkedIn profile">Aniket Shelke</a>
                             </div>
                         </div>
 
@@ -114,7 +114,7 @@ const Footer = () => {
                             </div>
                             <div className="footer-contact-details">
                                 <span className="footer-contact-label">GitHub Profile</span>
-                                <a href="https://github.com/Aniket0990" target="_blank" rel="noopener noreferrer">Aniket0990</a>
+                                <a href="https://github.com/Aniket0990" target="_blank" rel="noopener noreferrer" aria-label="Visit Aniket Shelke's GitHub profile">Aniket0990</a>
                             </div>
                         </div>
                     </div>

@@ -14,7 +14,14 @@ const About = () => {
                     {/* Left Column: Visual Profile Photo & Details Panel */}
                     <div className="about-visual scroll-reveal fade-up">
                         <div className="profile-img-frame">
-                            <img src={profileImg} alt="Aniket Shelke" className="profile-photo" />
+                            <img
+                                src={profileImg}
+                                alt="Aniket Shelke - Full Stack Developer and Software Engineer"
+                                className="profile-photo"
+                                width="300"
+                                height="300"
+                                loading="lazy"
+                            />
                         </div>
 
                         <div className="about-details">
@@ -25,13 +32,13 @@ const About = () => {
                             <div className="about-detail-item">
                                 <span className="detail-label">Email:</span>
                                 <span className="detail-val">
-                                    <a href="mailto:aniketshelke554@gmail.com">aniketshelke554@gmail.com</a>
+                                    <a href="mailto:aniketshelke554@gmail.com" aria-label="Send email to aniketshelke554@gmail.com">aniketshelke554@gmail.com</a>
                                 </span>
                             </div>
                             <div className="about-detail-item">
                                 <span className="detail-label">Phone:</span>
                                 <span className="detail-val">
-                                    <a href="tel:+919112776061">+91 9112776061</a>
+                                    <a href="tel:+919112776061" aria-label="Call +91 9112776061">+91 9112776061</a>
                                 </span>
                             </div>
                         </div>
@@ -43,6 +50,7 @@ const About = () => {
                                 download="Aniket_Shelke_Resume.pdf"
                                 className="btn btn-primary btn-block"
                                 style={{ width: '100%' }}
+                                aria-label="Download Aniket Shelke's Resume in PDF format"
                             >
                                 <Download size={18} />
                                 <span>Download Resume</span>

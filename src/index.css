@@ -140,6 +140,7 @@ section {
 .text-gradient {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-cyan) 50%, var(--color-primary) 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-size: 200% auto;
     animation: shine 4s linear infinite;
