@@ -1015,6 +1015,10 @@ section {
     background: linear-gradient(135deg, #062f4f, #0f1423);
 }
 
+.project-p3-gradient {
+    background: linear-gradient(135deg, #4a2410, #1a1207);
+}
+
 .project-bg-icon {
     width: 80px;
     height: 80px;

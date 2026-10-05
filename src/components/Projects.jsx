@@ -1,7 +1,8 @@
 import React from 'react';
-import { ExternalLink, Building2, ShieldAlert } from 'lucide-react';
+import { ExternalLink, Building2, ShieldAlert, MessageCircle } from 'lucide-react';
 import storeRatingApp from '../assets/projects/store rating app.jpg';
 import nvidiaFibernet from '../assets/projects/NvidiaFibernet.png';
+import connecto from '../assets/projects/connecto.png';
 
 // Custom GithubIcon component
 const GithubIcon = ({ size = 16, ...props }) => (
@@ -24,6 +25,23 @@ const GithubIcon = ({ size = 16, ...props }) => (
 
 const Projects = () => {
     const projectList = [
+        {
+            title: "Connecto - Real-Time Chat Web App",
+            image: connecto,
+            bgClass: "project-p3-gradient",
+            icon: <MessageCircle className="project-bg-icon" size={80} />,
+            tags: ["ReactJS", "Node.js", "MongoDB", "Socket.IO"],
+            description: "Connecto is a connection-driven social networking and real-time communication platform built on the MERN stack with Socket.IO. Beyond instant messaging, it integrates a social connection engine that lets users discover peers, build networks through connection requests, and interact in private and group conversations with rich media and document sharing.",
+            features: [
+                "Real-Time Messaging: Sub-second message delivery over Socket.IO with live typing indicators, online/offline presence and read receipts.",
+                "Social Connection Engine: Discover users and manage the full connection lifecycle - send, accept, decline and disconnect.",
+                "Media & Document Hub: Cloudinary image pipeline plus authenticated in-app preview for PDF, DOC, XLS, PPT and more.",
+                "Tech Stack: React 19 + TailwindCSS (Frontend), Node.js/Express + MongoDB (Backend), Socket.IO (Realtime)."
+            ],
+            codeUrl: "https://github.com/Aniket0990/ChatWebApp",
+            demoUrl: "https://connectnchat.vercel.app/",
+            demoLabel: "Live Demo"
+        },
         {
             title: "Store Rating Web App",
             image: storeRatingApp,
@@ -125,9 +143,11 @@ const Projects = () => {
                                         title={`View live demo for ${project.title}`}
                                         aria-label={`Live demo for ${project.title}`}
                                         onClick={project.demoUrl.startsWith('#') ? handleScrollToContact : undefined}
+                                        target={project.demoUrl.startsWith('#') ? undefined : "_blank"}
+                                        rel={project.demoUrl.startsWith('#') ? undefined : "noopener noreferrer"}
                                     >
                                         <ExternalLink size={16} />
-                                        <span>Live Demo soon...</span>
+                                        <span>{project.demoLabel || "Live Demo soon..."}</span>
                                     </a>
                                 </div>
                             </div>
